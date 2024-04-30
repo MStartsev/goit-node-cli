@@ -40,7 +40,7 @@ export async function removeContact(contactId) {
     return null;
   }
 
-  const removedContact = contacts.splice(index, 1);
+  const [removedContact] = contacts.splice(index, 1);
   writeContacts(contacts);
   return removedContact;
 }
